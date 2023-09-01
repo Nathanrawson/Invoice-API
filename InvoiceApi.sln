@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Services", "Invoice
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Services.UnitTests", "Invoice.UnitTests\Invoice.Services.UnitTests.csproj", "{0ACDFA9A-A698-464F-8303-2845AB4CA79E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Services.IntegrationTests", "Invoice.IntegrationTests\Invoice.Services.IntegrationTests.csproj", "{8CE895AB-2D71-4215-B09D-FBF7B7112EAF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.DomainModels", "Invoice.DomainModels\Invoice.DomainModels.csproj", "{0D7BD003-3CCD-4513-AFBE-1F7CCC398B85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Service.Interfaces", "Invoice.Service.Interfaces\Invoice.Service.Interfaces.csproj", "{7DF4D22E-C767-4662-98F7-0D4ADBD243D0}"
@@ -39,10 +37,6 @@ Global
 		{0ACDFA9A-A698-464F-8303-2845AB4CA79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ACDFA9A-A698-464F-8303-2845AB4CA79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ACDFA9A-A698-464F-8303-2845AB4CA79E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CE895AB-2D71-4215-B09D-FBF7B7112EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CE895AB-2D71-4215-B09D-FBF7B7112EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CE895AB-2D71-4215-B09D-FBF7B7112EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CE895AB-2D71-4215-B09D-FBF7B7112EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D7BD003-3CCD-4513-AFBE-1F7CCC398B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D7BD003-3CCD-4513-AFBE-1F7CCC398B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D7BD003-3CCD-4513-AFBE-1F7CCC398B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
