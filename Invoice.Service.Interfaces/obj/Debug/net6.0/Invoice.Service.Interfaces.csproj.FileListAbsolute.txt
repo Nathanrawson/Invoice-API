@@ -1,0 +1,15 @@
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\bin\Debug\net6.0\Invoice.Service.Interfaces.deps.json
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\bin\Debug\net6.0\Invoice.Service.Interfaces.dll
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\bin\Debug\net6.0\Invoice.Service.Interfaces.pdb
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\bin\Debug\net6.0\Invoice.DomainModels.dll
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\bin\Debug\net6.0\Invoice.DomainModels.pdb
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.csproj.AssemblyReference.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.AssemblyInfoInputs.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.AssemblyInfo.cs
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.csproj.CopyComplete
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.dll
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\refint\Invoice.Service.Interfaces.dll
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\Invoice.Service.Interfaces.pdb
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.Service.Interfaces\obj\Debug\net6.0\ref\Invoice.Service.Interfaces.dll

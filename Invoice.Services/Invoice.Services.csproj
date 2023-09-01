@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MigraDocCore.Rendering" Version="1.3.60" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.60" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Invoice.Service.Interfaces\Invoice.Service.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

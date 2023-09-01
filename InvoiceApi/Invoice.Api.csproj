@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-InvoiceApi-6FE49131-A31A-4CF3-B2F0-9DCCE2A04EB9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Invoice.DomainModels\Invoice.DomainModels.csproj" />
+    <ProjectReference Include="..\Invoice.Service.Interfaces\Invoice.Service.Interfaces.csproj" />
+    <ProjectReference Include="..\Invoice.Services\Invoice.Services.csproj" />
+  </ItemGroup>
+
+</Project>

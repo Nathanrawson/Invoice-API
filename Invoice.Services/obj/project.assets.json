@@ -1,0 +1,348 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "MigraDocCore.DocumentObjectModel/1.3.60": {
+        "type": "package",
+        "dependencies": {
+          "PdfSharpCore": "1.3.60"
+        },
+        "compile": {
+          "lib/net6.0/MigraDocCore.DocumentObjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MigraDocCore.DocumentObjectModel.dll": {}
+        }
+      },
+      "MigraDocCore.Rendering/1.3.60": {
+        "type": "package",
+        "dependencies": {
+          "MigraDocCore.DocumentObjectModel": "1.3.60",
+          "PdfSharpCore": "1.3.60",
+          "PdfSharpCore.Charting": "1.3.60"
+        },
+        "compile": {
+          "lib/net6.0/MigraDocCore.Rendering.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MigraDocCore.Rendering.dll": {}
+        }
+      },
+      "PdfSharpCore/1.3.60": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "1.3.3",
+          "SixLabors.Fonts": "1.0.0-beta17",
+          "SixLabors.ImageSharp": "1.0.4"
+        },
+        "compile": {
+          "lib/net6.0/PdfSharpCore.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PdfSharpCore.dll": {}
+        },
+        "resource": {
+          "lib/net6.0/de/PdfSharpCore.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "PdfSharpCore.Charting/1.3.60": {
+        "type": "package",
+        "dependencies": {
+          "PdfSharpCore": "1.3.60"
+        },
+        "compile": {
+          "lib/net6.0/PdfSharpCore.Charting.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/PdfSharpCore.Charting.dll": {}
+        }
+      },
+      "SharpZipLib/1.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "SixLabors.Fonts/1.0.0-beta17": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.Fonts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Invoice.DomainModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Invoice.DomainModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Invoice.DomainModels.dll": {}
+        }
+      },
+      "Invoice.Service.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Invoice.DomainModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Invoice.Service.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Invoice.Service.Interfaces.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MigraDocCore.DocumentObjectModel/1.3.60": {
+      "sha512": "X+WS/WQqpSQjCbh2moMd88qGu0PSa2stZ3i7qfB+e2l0N6QrdKPcDPYwT/bZzRaIQLYKMERyUCMffsJtdrs/qA==",
+      "type": "package",
+      "path": "migradoccore.documentobjectmodel/1.3.60",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net5.0/MigraDocCore.DocumentObjectModel.dll",
+        "lib/net6.0/MigraDocCore.DocumentObjectModel.dll",
+        "lib/netcoreapp3.1/MigraDocCore.DocumentObjectModel.dll",
+        "lib/netstandard2.0/MigraDocCore.DocumentObjectModel.dll",
+        "migradoccore.documentobjectmodel.1.3.60.nupkg.sha512",
+        "migradoccore.documentobjectmodel.nuspec"
+      ]
+    },
+    "MigraDocCore.Rendering/1.3.60": {
+      "sha512": "yPjVMMsXDkBCcOBaAIPRXqGZOMuyQ0pJhlfJrV4L11+nUwYUEgVJTZuwqJtbOrEmG02Rqi1p7enMqlzTyhRYjA==",
+      "type": "package",
+      "path": "migradoccore.rendering/1.3.60",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net5.0/MigraDocCore.Rendering.dll",
+        "lib/net6.0/MigraDocCore.Rendering.dll",
+        "lib/netcoreapp3.1/MigraDocCore.Rendering.dll",
+        "lib/netstandard2.0/MigraDocCore.Rendering.dll",
+        "migradoccore.rendering.1.3.60.nupkg.sha512",
+        "migradoccore.rendering.nuspec"
+      ]
+    },
+    "PdfSharpCore/1.3.60": {
+      "sha512": "gVP1FLAKevGi70RdpRqM+F8bUi/LyaBR3gaz6iOyvSQ/A+dByj6L7FYVMxecZ+6w8tN8+Hp4UM35IiFDwe2J7A==",
+      "type": "package",
+      "path": "pdfsharpcore/1.3.60",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net5.0/PdfSharpCore.dll",
+        "lib/net5.0/de/PdfSharpCore.resources.dll",
+        "lib/net6.0/PdfSharpCore.dll",
+        "lib/net6.0/de/PdfSharpCore.resources.dll",
+        "lib/netcoreapp3.1/PdfSharpCore.dll",
+        "lib/netcoreapp3.1/de/PdfSharpCore.resources.dll",
+        "lib/netstandard2.0/PdfSharpCore.dll",
+        "lib/netstandard2.0/de/PdfSharpCore.resources.dll",
+        "pdfsharpcore.1.3.60.nupkg.sha512",
+        "pdfsharpcore.nuspec"
+      ]
+    },
+    "PdfSharpCore.Charting/1.3.60": {
+      "sha512": "1PkxDnhr2YQ0NLeE7e4FDgBfKpnBOCujKT9FvMg8Hm9BI4UVTSgGb/Jm6hrGJFIZXT4N38hQjSH7L8F5eXdIJg==",
+      "type": "package",
+      "path": "pdfsharpcore.charting/1.3.60",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net5.0/PdfSharpCore.Charting.dll",
+        "lib/net6.0/PdfSharpCore.Charting.dll",
+        "lib/netcoreapp3.1/PdfSharpCore.Charting.dll",
+        "lib/netstandard2.0/PdfSharpCore.Charting.dll",
+        "pdfsharpcore.charting.1.3.60.nupkg.sha512",
+        "pdfsharpcore.charting.nuspec"
+      ]
+    },
+    "SharpZipLib/1.3.3": {
+      "sha512": "N8+hwhsKZm25tDJfWpBSW7EGhH/R7EMuiX+KJ4C4u+fCWVc1lJ5zg1u3S1RPPVYgTqhx/C3hxrqUpi6RwK5+Tg==",
+      "type": "package",
+      "path": "sharpziplib/1.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/sharpziplib-nuget-256x256.png",
+        "lib/net45/ICSharpCode.SharpZipLib.dll",
+        "lib/net45/ICSharpCode.SharpZipLib.pdb",
+        "lib/net45/ICSharpCode.SharpZipLib.xml",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.pdb",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.xml",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.pdb",
+        "lib/netstandard2.1/ICSharpCode.SharpZipLib.xml",
+        "sharpziplib.1.3.3.nupkg.sha512",
+        "sharpziplib.nuspec"
+      ]
+    },
+    "SixLabors.Fonts/1.0.0-beta17": {
+      "sha512": "qubgVovAoSR7vyv9tJ68gSzRIPWz7HBjTM9rwAaLjpcJ6T50arnX+GHAZcC0r2mVagyRMknCNda3DGoe8StUUQ==",
+      "type": "package",
+      "path": "sixlabors.fonts/1.0.0-beta17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/SixLabors.Fonts.dll",
+        "lib/netcoreapp3.1/SixLabors.Fonts.xml",
+        "lib/netstandard2.0/SixLabors.Fonts.dll",
+        "lib/netstandard2.0/SixLabors.Fonts.xml",
+        "lib/netstandard2.1/SixLabors.Fonts.dll",
+        "lib/netstandard2.1/SixLabors.Fonts.xml",
+        "sixlabors.fonts.1.0.0-beta17.nupkg.sha512",
+        "sixlabors.fonts.128.png",
+        "sixlabors.fonts.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp/1.0.4": {
+      "sha512": "H2rPiEr2ddBOltOuqRYhpLBAsQXDAhbzMMhhuksnBG2oefup1MXMchALe7yYkKJksNbtxbZHKeM6dn/68I75qw==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/1.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/SixLabors.ImageSharp.dll",
+        "lib/net472/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.xml",
+        "lib/netstandard1.3/SixLabors.ImageSharp.dll",
+        "lib/netstandard1.3/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.0/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.0/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.1/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.1/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.1.0.4.nupkg.sha512",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
+    "Invoice.DomainModels/1.0.0": {
+      "type": "project",
+      "path": "../Invoice.DomainModels/Invoice.DomainModels.csproj",
+      "msbuildProject": "../Invoice.DomainModels/Invoice.DomainModels.csproj"
+    },
+    "Invoice.Service.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Invoice.Service.Interfaces/Invoice.Service.Interfaces.csproj",
+      "msbuildProject": "../Invoice.Service.Interfaces/Invoice.Service.Interfaces.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Invoice.Service.Interfaces >= 1.0.0",
+      "MigraDocCore.Rendering >= 1.3.60",
+      "PdfSharpCore >= 1.3.60"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\NathanRawson\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.Services\\Invoice.Services.csproj",
+      "projectName": "Invoice.Services",
+      "projectPath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.Services\\Invoice.Services.csproj",
+      "packagesPath": "C:\\Users\\NathanRawson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.Services\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\NathanRawson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.Service.Interfaces\\Invoice.Service.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.Service.Interfaces\\Invoice.Service.Interfaces.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "MigraDocCore.Rendering": {
+            "target": "Package",
+            "version": "[1.3.60, )"
+          },
+          "PdfSharpCore": {
+            "target": "Package",
+            "version": "[1.3.60, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

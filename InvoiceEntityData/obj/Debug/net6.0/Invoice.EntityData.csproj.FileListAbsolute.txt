@@ -1,0 +1,5 @@
+C:\Users\NathanRawson\source\repos\InvoiceApi\InvoiceEntityData\obj\Debug\net6.0\Invoice.EntityData.csproj.AssemblyReference.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\InvoiceEntityData\obj\Debug\net6.0\Invoice.EntityData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NathanRawson\source\repos\InvoiceApi\InvoiceEntityData\obj\Debug\net6.0\Invoice.EntityData.AssemblyInfoInputs.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\InvoiceEntityData\obj\Debug\net6.0\Invoice.EntityData.AssemblyInfo.cs
+C:\Users\NathanRawson\source\repos\InvoiceApi\InvoiceEntityData\obj\Debug\net6.0\Invoice.EntityData.csproj.CoreCompileInputs.cache

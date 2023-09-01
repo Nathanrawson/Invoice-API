@@ -1,0 +1,12 @@
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\bin\Debug\net6.0\Invoice.DomainModels.deps.json
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\bin\Debug\net6.0\Invoice.DomainModels.dll
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\bin\Debug\net6.0\Invoice.DomainModels.pdb
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\Invoice.DomainModels.csproj.AssemblyReference.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\Invoice.DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\Invoice.DomainModels.AssemblyInfoInputs.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\Invoice.DomainModels.AssemblyInfo.cs
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\Invoice.DomainModels.csproj.CoreCompileInputs.cache
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\Invoice.DomainModels.dll
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\refint\Invoice.DomainModels.dll
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\Invoice.DomainModels.pdb
+C:\Users\NathanRawson\source\repos\InvoiceApi\Invoice.DomainModels\obj\Debug\net6.0\ref\Invoice.DomainModels.dll
