@@ -10,10 +10,8 @@ namespace Invoice.Api.DtoModels
         [MaxLength(50)]
         public string AccountName { get; set; }
 
-        [MaxLength(50)]
         public int RoutingNumber { get; set; }
 
-        [MaxLength(50)]
         public int AccountNumber { get; set; }
     }
 }

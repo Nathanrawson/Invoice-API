@@ -37,9 +37,9 @@ namespace Invoice.Services.Factories
         private void CreateHeader(Section section, DomainModels.Invoice invoice)
         {
             var header = section.Headers.Primary.AddParagraph();
-            header.AddFormattedText(invoice.CompanyName, TextFormat.Bold);
+            header.AddFormattedText(invoice.CompanyName ?? "", TextFormat.Bold);
             header.AddLineBreak();
-            var subHeader = header.AddFormattedText(invoice.CompanySubHeader);
+            var subHeader = header.AddFormattedText(invoice.CompanySubHeader ?? "");
             subHeader.Font.Size = 10;
         }
 
@@ -48,13 +48,14 @@ namespace Invoice.Services.Factories
             var footer = section.Footers.Primary;
 
             var companyNameFooter = footer.AddParagraph();
-            companyNameFooter.AddText(invoice.CompanyName);
+            companyNameFooter.AddText(invoice.CompanyName ?? "");
             companyNameFooter.Format.Alignment = ParagraphAlignment.Left;
 
             var companyContactAndAddressFooter = footer.AddParagraph();
-            companyContactAndAddressFooter.AddText($"{invoice.CompanyContact.PhoneNumber} | {invoice.CompanyContact.Email}");
+            companyContactAndAddressFooter.AddText($"{invoice.CompanyContact?.PhoneNumber ?? ""} | {invoice.CompanyContact?.Email ?? ""}");
             companyContactAndAddressFooter.AddLineBreak();
-            AddAddressToParagraph(companyContactAndAddressFooter, invoice.CompanyAddress);
+            if(invoice.CompanyAddress != null)
+                AddAddressToParagraph(companyContactAndAddressFooter, invoice.CompanyAddress);
             companyContactAndAddressFooter.Format.Alignment = ParagraphAlignment.Right;
         }
 
@@ -96,67 +97,105 @@ namespace Invoice.Services.Factories
 
             var row = table.AddRow();
             // Left column: "Billed to:" and client address
-            AddAddressToParagraph(row.Cells[0].AddParagraph(), invoice.ClientAddress, "Billed to:");
+            if(invoice.ClientAddress != null)
+                AddAddressToParagraph(row.Cells[0].AddParagraph(), invoice.ClientAddress, "Billed to:");
 
             // Right column: Invoice details
             var invoiceDetails = row.Cells[1].AddParagraph();
             invoiceDetails.Format.Alignment = ParagraphAlignment.Right;
-            invoiceDetails.AddFormattedText($"Invoice Number: {invoice.InvoiceNumber}", TextFormat.Bold);
-            invoiceDetails.AddLineBreak();
-            invoiceDetails.AddText($"Order Number: {invoice.OrderNumber}");
-            invoiceDetails.AddLineBreak();
-            invoiceDetails.AddText($"Invoice Date: {invoice.InvoiceDate?.ToShortDateString()}");
-            invoiceDetails.AddLineBreak();
-            invoiceDetails.AddText($"Payment Date: {invoice.PaymentDate?.ToShortDateString()}");
-
-            section.AddSpace("1cm");
-            // Line items table
-            var itemsTable = section.AddTable();
-            itemsTable.Style = "Table";
-            itemsTable.Borders.Color = Colors.Black;
-            itemsTable.Borders.Width = 0.25;
-            itemsTable.Borders.Left.Width = 0.5;
-            itemsTable.Borders.Right.Width = 0.5;
-            itemsTable.Rows.LeftIndent = 0;
-            itemsTable.AddColumn("3.2cm");  // Description
-            itemsTable.AddColumn("3.2cm");  // Date
-            itemsTable.AddColumn("3.2cm");  // Ratepadding
-            itemsTable.AddColumn("3.2cm");  // RateTotal
-            itemsTable.AddColumn("3.2cm");  // Total
-
-            row = itemsTable.AddRow();
-            row.Cells[0].AddParagraph("Description").Style = "TableHeader";
-            row.Cells[1].AddParagraph("Date").Style = "TableHeader";
-            row.Cells[2].AddParagraph("Rate").Style = "TableHeader";
-            row.Cells[3].AddParagraph("Rate Total").Style = "TableHeader";
-            row.Cells[4].AddParagraph("Total").Style = "TableHeader";
-            decimal totalAmount = 0;
-            foreach (var lineItem in invoice.LineItems)
+            if (invoice.InvoiceNumber != null)
             {
-                totalAmount += lineItem.Total;
-                row = itemsTable.AddRow();
-                row.Cells[0].AddParagraph(lineItem.Description);
-                row.Cells[1].AddParagraph(lineItem.Date.ToShortDateString());
-                row.Cells[2].AddParagraph(lineItem.Rate.ToString("C"));
-                row.Cells[3].AddParagraph(lineItem.RateTotal.ToString("C"));
-                row.Cells[4].AddParagraph(lineItem.Total.ToString("C"));
+                invoiceDetails.AddFormattedText($"Invoice Number: {invoice.InvoiceNumber}", TextFormat.Bold);
+                invoiceDetails.AddLineBreak();
             }
 
-            var totalParagraph = section.AddParagraph();
-            totalParagraph.AddFormattedText($"Total: {totalAmount.ToString("C")}", TextFormat.Bold);
-            totalParagraph.Format.SpaceBefore = "1cm";
+            if (invoice.OrderNumber != null)
+            {
+                invoiceDetails.AddText($"Order Number: {invoice.OrderNumber}");
+                invoiceDetails.AddLineBreak();
+            }
+
+            if (invoice.InvoiceDate != null)
+            {
+                invoiceDetails.AddText($"Invoice Date: {invoice.InvoiceDate?.ToShortDateString()}");
+                invoiceDetails.AddLineBreak();
+            }
+
+            if (invoice.PaymentDate != null)
+            {
+                invoiceDetails.AddText($"Payment Date: {invoice.PaymentDate?.ToShortDateString()}");
+            }
+
+            if (invoice.LineItems.Any())
+            {
+                section.AddSpace("1cm");
+                // Line items table
+                var itemsTable = section.AddTable();
+                itemsTable.Style = "Table";
+                itemsTable.Borders.Color = Colors.Black;
+                itemsTable.Borders.Width = 0.25;
+                itemsTable.Borders.Left.Width = 0.5;
+                itemsTable.Borders.Right.Width = 0.5;
+                itemsTable.Rows.LeftIndent = 0;
+                itemsTable.AddColumn("3.2cm"); // Description
+                itemsTable.AddColumn("3.2cm"); // Date
+                itemsTable.AddColumn("3.2cm"); // Ratepadding
+                itemsTable.AddColumn("3.2cm"); // RateTotal
+                itemsTable.AddColumn("3.2cm"); // Total
+
+                row = itemsTable.AddRow();
+                row.Cells[0].AddParagraph("Description").Style = "TableHeader";
+                row.Cells[1].AddParagraph("Date").Style = "TableHeader";
+                row.Cells[2].AddParagraph("Rate").Style = "TableHeader";
+                row.Cells[3].AddParagraph("Rate Total").Style = "TableHeader";
+                row.Cells[4].AddParagraph("Total").Style = "TableHeader";
+                decimal totalAmount = 0;
+                foreach (var lineItem in invoice.LineItems)
+                {
+                    totalAmount += lineItem.Total;
+                    row = itemsTable.AddRow();
+                    row.Cells[0].AddParagraph(lineItem.Description);
+                    if(lineItem.Date != null)
+                        row.Cells[1].AddParagraph(lineItem.Date.Value.ToShortDateString());
+                    row.Cells[2].AddParagraph(lineItem.Rate.ToString("C"));
+                    row.Cells[3].AddParagraph(lineItem.RateTotal.ToString("C"));
+                    row.Cells[4].AddParagraph(lineItem.Total.ToString("C"));
+                }
+
+                var totalParagraph = section.AddParagraph();
+                totalParagraph.AddFormattedText($"Total: {totalAmount.ToString("C")}", TextFormat.Bold);
+                totalParagraph.Format.SpaceBefore = "1cm";
+            }
 
             if (invoice.BankingDetails == null)
-                return;
+                    return;
             var bankDetailsParagraph = section.AddParagraph();
-            bankDetailsParagraph.AddFormattedText($"Bank: {invoice.BankingDetails.BankName}");
-            bankDetailsParagraph.AddLineBreak();
-            bankDetailsParagraph.AddFormattedText($"Account Name: {invoice.BankingDetails.AccountName}");
-            bankDetailsParagraph.AddLineBreak();
-            bankDetailsParagraph.AddFormattedText($"Routing Number: {invoice.BankingDetails.RoutingNumber}");
-            bankDetailsParagraph.AddLineBreak();
-            bankDetailsParagraph.AddFormattedText($"Account Number: {invoice.BankingDetails.AccountNumber}");
+            if (!string.IsNullOrEmpty(invoice.BankingDetails?.BankName))
+            {
+                bankDetailsParagraph.AddFormattedText($"Bank: {invoice.BankingDetails.BankName}");
+                bankDetailsParagraph.AddLineBreak();
+            }
+
+            if (!string.IsNullOrEmpty(invoice.BankingDetails?.AccountName))
+            {
+                bankDetailsParagraph.AddFormattedText($"Account Name: {invoice.BankingDetails.AccountName}");
+                bankDetailsParagraph.AddLineBreak();
+            }
+
+            if (invoice.BankingDetails?.RoutingNumber != null)
+            {
+                bankDetailsParagraph.AddFormattedText($"Routing Number: {invoice.BankingDetails.RoutingNumber}");
+                bankDetailsParagraph.AddLineBreak();
+            }
+
+            if (invoice.BankingDetails?.AccountNumber != null)
+            {
+                bankDetailsParagraph.AddFormattedText($"Account Number: {invoice.BankingDetails.AccountNumber}");
+                bankDetailsParagraph.AddLineBreak();
+            }
+
             bankDetailsParagraph.Format.SpaceBefore = "2cm";
+            
         }
 
         private void AddAddressToParagraph(Paragraph paragraph, Address address, string prefix = null)
@@ -166,23 +205,50 @@ namespace Invoice.Services.Factories
                 paragraph.AddText(prefix);
                 paragraph.AddLineBreak();
             }
-            paragraph.AddText(address.Name);
-            paragraph.AddLineBreak();
-            paragraph.AddText(address.Line1);
-            paragraph.AddLineBreak();
-            if (!string.IsNullOrEmpty(address.Line2))
+
+            if (!string.IsNullOrEmpty(address?.Name))
+            {
+                paragraph.AddText(address.Name);
+                paragraph.AddLineBreak();
+            }
+
+            if (!string.IsNullOrEmpty(address?.Line1))
+            {
+                paragraph.AddText(address.Line1);
+                paragraph.AddLineBreak();
+            }
+
+            if (!string.IsNullOrEmpty(address?.Line2))
             {
                 paragraph.AddText(address.Line2);
                 paragraph.AddLineBreak();
             }
-            paragraph.AddText(address.City);
-            paragraph.AddLineBreak();
-            paragraph.AddText(address.County);
-            paragraph.AddLineBreak();
-            paragraph.AddText(address.Country);
-            paragraph.AddLineBreak();
-            paragraph.AddText(address.Postcode);
+
+            if (!string.IsNullOrEmpty(address?.City))
+            {
+                paragraph.AddText(address.City);
+                paragraph.AddLineBreak();
+            }
+
+            if (!string.IsNullOrEmpty(address?.County))
+            {
+                paragraph.AddText(address.County);
+                paragraph.AddLineBreak();
+            }
+
+            if (!string.IsNullOrEmpty(address?.Country))
+            {
+                paragraph.AddText(address.Country);
+                paragraph.AddLineBreak();
+            }
+
+            if (!string.IsNullOrEmpty(address?.Postcode))
+            {
+                paragraph.AddText(address.Postcode);
+                paragraph.AddLineBreak();
+            }
         }
+
     }
 
     public static class PdfExtensions

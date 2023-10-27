@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rHhoqCbkXSVKazWJmfFWq+joUtuFq3OvLwUTmsNGZdakiEEXC/a++DzOK9F1K49KkcTTisS8m91Tdi7TP3Zs9Q==",
+  "dgSpecHash": "uzzXU+frnYHCucruqxHOppeFCn1AfI5UaYr1oWcFL0JFOZsDxVUzHip/UNukx2fsVLDfDw6SDjvBLfZbzzq+dA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\InvoiceEntityData\\Invoice.EntityData.csproj",
+  "projectFilePath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.EntityData\\Invoice.EntityData.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\InvoiceEntityData\\Invoice.EntityData.csproj": {}
+    "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.EntityData\\Invoice.EntityData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\InvoiceEntityData\\Invoice.EntityData.csproj": {
+    "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.EntityData\\Invoice.EntityData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\InvoiceEntityData\\Invoice.EntityData.csproj",
+        "projectUniqueName": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.EntityData\\Invoice.EntityData.csproj",
         "projectName": "Invoice.EntityData",
-        "projectPath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\InvoiceEntityData\\Invoice.EntityData.csproj",
+        "projectPath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.EntityData\\Invoice.EntityData.csproj",
         "packagesPath": "C:\\Users\\NathanRawson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\InvoiceEntityData\\obj\\",
+        "outputPath": "C:\\Users\\NathanRawson\\source\\repos\\InvoiceApi\\Invoice.EntityData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NathanRawson\\AppData\\Roaming\\NuGet\\NuGet.Config",

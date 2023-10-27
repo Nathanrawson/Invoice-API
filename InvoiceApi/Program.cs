@@ -32,7 +32,12 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors(options => options
+        .WithOrigins("http://localhost:3000") // Adjust this if your client is on a different origin
+        .AllowAnyMethod() // Allows all HTTP methods. Be more specific if needed.
+        .AllowAnyHeader() // Allows all headers. Be more specific if needed.
+        .AllowCredentials() // Allows cookies and credentials.
+);
 
 app.MapControllers();
-
 app.Run();

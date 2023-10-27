@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Api", "InvoiceApi\Invoice.Api.csproj", "{0116D93D-CBD8-42A8-A25B-61B4A2CE786F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.EntityData", "InvoiceEntityData\Invoice.EntityData.csproj", "{F3D4325C-09F5-4AAE-B1C2-2CCE8EC9A0C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.EntityData", "Invoice.EntityData\Invoice.EntityData.csproj", "{F3D4325C-09F5-4AAE-B1C2-2CCE8EC9A0C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Services", "Invoice.Services\Invoice.Services.csproj", "{BDD90687-3334-4F83-BBEC-3C0605BBA3FC}"
 EndProject
